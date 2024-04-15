@@ -22,7 +22,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
 
   const handleSearch = async () => {
     if(search) {
-      const exercisesData = await fetchData('https://exercisebd.p.rapidapi.com/exercises', exerciseOptions);
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
 
       const searchedExercises = exercisesData.filter(
         (exercise) => exercise.name.toLowerCase().includes(search)
